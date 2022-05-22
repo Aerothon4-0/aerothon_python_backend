@@ -1,0 +1,8 @@
+*.pyc
+*.log
+*.edi
+*.csv
+*.txt
+*.xml
+*.json
+.migrations
