@@ -20,7 +20,7 @@ flask db upgrade
 Running locally:
 
 ```bash
-python app.py
+flask run
 ```
 
 Running in production:
