@@ -21,7 +21,8 @@ class Website(database.Model):
 	
 	id = database.Column(database.Integer , primary_key=True, autoincrement=True)
 	token = database.Column(database.String(1450)  , nullable=False)
-	port = database.Column(database.Integer , default=5001, autoincrement=True)
+	backend_port = database.Column(database.Integer , nullable=True)
+	frontend_port = database.Column(database.Integer , nullable=True)
 
 	website_name = database.Column(database.String(36)  , nullable=False)
 	company_name = database.Column(database.String(36)  , nullable=False)
@@ -29,7 +30,8 @@ class Website(database.Model):
 
 	is_front_end = database.Column(database.Boolean, default=False, nullable=False)
 	front_end = database.Column(database.Enum(TechnologyEnum), default=TechnologyEnum.react,nullable=False)
-	
+	front_type = database.Column(database.String(36)  , nullable=False)
+
 	is_back_end = database.Column(database.Boolean, default=False, nullable=False)
 	back_end = database.Column(database.Enum(TechnologyEnum), default=TechnologyEnum.python,nullable=False)
 

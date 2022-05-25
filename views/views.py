@@ -7,7 +7,7 @@ import json
 import uuid
 
 from models.models import Website,database
-from .helper import create_python_backend_website 
+from .helper import create_python_backend_website,create_react_website
 
 def generate_website():
 	if request.method == 'POST':
@@ -16,6 +16,10 @@ def generate_website():
 			function_uuid = uuid.uuid1() 
 			function_name = 'Generate website'
 			response_data = {}
+
+			backend_start_port = 5000
+			frontend_start_port = 3000
+
 			try:		
 				data = json.loads(request.data)
 			except Exception as e:
@@ -31,6 +35,7 @@ def generate_website():
 				
 				is_front_end = data.get('is_front_end',True)
 				front_end = data.get('front_end','react')
+				front_type = data.get('front_type','blog')
 
 				is_back_end = data.get('is_back_end',True)
 				back_end = data.get('back_end','python')
@@ -57,6 +62,7 @@ def generate_website():
 
 	                is_front_end=is_front_end,
 	                front_end=front_end,
+	                front_type=front_type,
 
 	                is_back_end=is_back_end,
 	                back_end=back_end,
@@ -79,13 +85,20 @@ def generate_website():
 					website_name=website_name,
 					token = token
 					).first()
-				port = website_obj.port
-				print(port , "port")
+				obj_id = website_obj.id
+
+				back_end_port = backend_start_port + obj_id
+				front_end_port = frontend_start_port + obj_id
+				print(back_end_port , "back_end_port")
+				print(front_end_port , "front_end_port")
 
 				backend_url = ''
 				frontend_url = ''
 				if back_end == 'python':
-					backend_url = create_python_backend_website(website_name,token,port)
+					backend_url = create_python_backend_website(website_name,token,back_end_port)
+
+				if front_end == 'react':
+					frontend_url = create_react_website(website_name,token,front_end_port,front_type)
 				
 
 
@@ -93,6 +106,13 @@ def generate_website():
 				response_data['backend_url'] = backend_url
 				response_data['frontend_url'] = frontend_url
 
+				website_obj.backend_port = back_end_port
+				website_obj.frontend_port = front_end_port
+
+				website_obj.backend_url = backend_url
+				website_obj.frontend_url = frontend_url
+				# database.session.add(website_obj)
+				database.session.commit()
 
 			except Exception as e:
 				print(e)

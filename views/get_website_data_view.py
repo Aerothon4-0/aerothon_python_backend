@@ -37,7 +37,10 @@ def get_website_data():
 				data['website_name'] = website_obj.website_name
 				data['company_name'] = website_obj.company_name
 				data['company_description'] = website_obj.company_description
-				data['port'] = website_obj.port
+				data['backend_port'] = website_obj.backend_port
+				data['frontend_port'] = website_obj.frontend_port
+				data['frontend_url'] = website_obj.frontend_url
+				data['backend_url'] = website_obj.backend_url
 
 				
 				print(data , "data")

@@ -1,8 +1,8 @@
 """Initial migration.
 
-Revision ID: cbba8a55f9e4
+Revision ID: 136e1455e3c2
 Revises: 
-Create Date: 2022-05-24 15:17:46.833470
+Create Date: 2022-05-25 16:30:30.780529
 
 """
 from alembic import op
@@ -10,7 +10,7 @@ import sqlalchemy as sa
 
 
 # revision identifiers, used by Alembic.
-revision = 'cbba8a55f9e4'
+revision = '136e1455e3c2'
 down_revision = None
 branch_labels = None
 depends_on = None
@@ -21,12 +21,14 @@ def upgrade():
     op.create_table('website_details',
     sa.Column('id', sa.Integer(), autoincrement=True, nullable=False),
     sa.Column('token', sa.String(length=1450), nullable=False),
-    sa.Column('port', sa.Integer(), autoincrement=True, nullable=True),
+    sa.Column('backend_port', sa.Integer(), nullable=True),
+    sa.Column('frontend_port', sa.Integer(), nullable=True),
     sa.Column('website_name', sa.String(length=36), nullable=False),
     sa.Column('company_name', sa.String(length=36), nullable=False),
     sa.Column('company_description', sa.String(length=1450), nullable=False),
     sa.Column('is_front_end', sa.Boolean(), nullable=False),
     sa.Column('front_end', sa.Enum('python', 'node', 'react', 'angular', 'react_native', name='technologyenum'), nullable=False),
+    sa.Column('front_type', sa.String(length=36), nullable=False),
     sa.Column('is_back_end', sa.Boolean(), nullable=False),
     sa.Column('back_end', sa.Enum('python', 'node', 'react', 'angular', 'react_native', name='technologyenum'), nullable=False),
     sa.Column('is_mobile_app_end', sa.Boolean(), nullable=False),
