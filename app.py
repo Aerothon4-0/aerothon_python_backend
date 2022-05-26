@@ -15,7 +15,7 @@ from flask_cors import CORS
 
 
 
-application = Flask(__name__)
+app = Flask(__name__)
 
 logging.basicConfig(filename="logs/error.log",
                     filemode='a',
@@ -23,27 +23,27 @@ logging.basicConfig(filename="logs/error.log",
                     datefmt='%Y-%m-%d %H:%M:%S')
 
 
-application.debug = True
-application.config['SQLALCHEMY_DATABASE_URI'] = 'sqlite:///app.db'
-application.config['SQLALCHEMY_TRACK_MODIFICATIONS'] = False
+app.debug = True
+app.config['SQLALCHEMY_DATABASE_URI'] = 'sqlite:///app.db'
+app.config['SQLALCHEMY_TRACK_MODIFICATIONS'] = False
 
 
 print("In app launch")
-application.register_blueprint(urls)
+app.register_blueprint(urls)
 
-CORS(application)
+CORS(app)
 
 def page_not_found(e):
   return jsonify(message='Thanku'), 200
 
-application.register_error_handler(404, page_not_found)
+app.register_error_handler(404, page_not_found)
 
-database.init_app(application)
-migrate = Migrate(application, database)
+database.init_app(app)
+migrate = Migrate(app, database)
 
 
 if __name__ == '__main__':
-	application.run()
+	app.run()
 
 
 
