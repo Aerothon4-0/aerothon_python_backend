@@ -22,7 +22,7 @@ function Home(props) {
     //console.log(PORT)
     useEffect(() => {
            const loadBlogName = async () => {
-               axios.get("http://ec2-54-191-211-169.us-west-2.compute.amazonaws.com:{PORT}/user/get_data?app=Alans&token=b01028f9dc2611ecb95ec809a8853d3d")
+               axios.get("http://ec2-35-83-83-107.us-west-2.compute.amazonaws.com:{PORT}/user/get_data?app=Alans&token=b01028f9dc2611ecb95ec809a8853d3d")
                .then(function (response) {
                    // After fetching data stored it in posts state.
                     //console.log(response)
