@@ -9,7 +9,7 @@ from flask_migrate import Migrate
 
 from urls.urls import urls
 from models.models import database
-
+from flask_cors import CORS
 
 # from settings import *
 
@@ -30,6 +30,8 @@ application.config['SQLALCHEMY_TRACK_MODIFICATIONS'] = False
 
 print("In app launch")
 application.register_blueprint(urls)
+
+CORS(application)
 
 def page_not_found(e):
   return jsonify(message='Thanku'), 200
