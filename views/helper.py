@@ -19,7 +19,7 @@ def create_python_backend_website(website_name,token,port):
 		print(e)
 		app.logger.error('ERROR : %s ',str(e) )
 
-	backend_url = "http://0.0.0.0:{}{}".format(port,PYTHON_USER_BACKEND_END_POINT)
+	backend_url = "{}:{}{}".format(SERVER_IP_ADDRESS,port,PYTHON_USER_BACKEND_END_POINT)
 
 	return backend_url
 
@@ -40,6 +40,6 @@ def create_react_website(website_name,token,port,front_type):
 		print(e)
 		app.logger.error('ERROR : %s ',str(e) )
 
-	backend_url = "http://0.0.0.0:{}".format(port)
+	backend_url = "{}:{}".format(SERVER_IP_ADDRESS,port)
 
 	return backend_url

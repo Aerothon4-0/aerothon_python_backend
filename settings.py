@@ -12,3 +12,5 @@ FRONT_END_PROJECT_DIR = {
 	"blog" : ROOT_DIR + "/user_projects/airothon_blog_web",
 	"org" : "",
 }
+
+SERVER_IP_ADDRESS = "http://frontendmain-env.eba-9qrg8xzc.us-west-2.elasticbeanstalk.com"
