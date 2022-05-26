@@ -15,6 +15,7 @@ RUN pip install uwsgi
 # Install app requirements
 RUN pip install -r requirements.txt
  
+
 # Create app directory
 COPY . /user_backend
  
@@ -23,7 +24,7 @@ ENV HOME /user_backend
 WORKDIR /user_backend
  
 # Expose port 5000
-EXPOSE 5000
+EXPOSE 5000 5001 5002 5003 3001 3002 3003
 
 RUN chmod +x ./entrypoint.sh
 ENTRYPOINT ["/bin/bash","-c","chmod +x ./entrypoint.sh && ./entrypoint.sh"]
