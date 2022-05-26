@@ -1,4 +1,4 @@
-import React, { useState } from 'react';
+import React, { useState,useEffect } from 'react';
 import './css/bootstrap.min.css'
 import './css/style.css'
 import './css/responsive.css'
@@ -12,11 +12,31 @@ import img7 from './images/like1.png'
 import img8 from './images/comm1.png'
 import Contact from './Contact'
 import { useTranslation } from 'react-i18next';
+import axios from "axios";
 
 function Home(props) {
     const { t, i18n } = useTranslation();
     const [lang, setLang] = useState('en');
-    
+    const [blogName,setBlogName] = useState("BlogNameHere")
+    let PORT = parseInt(window.location.port)+2000
+    //console.log(PORT)
+    useEffect(() => {
+           const loadBlogName = async () => {
+               axios.get("http://ec2-54-191-211-169.us-west-2.compute.amazonaws.com:{PORT}/user/get_data?app=Alans&token=b01028f9dc2611ecb95ec809a8853d3d")
+               .then(function (response) {
+                   // After fetching data stored it in posts state.
+                    //console.log(response)
+                    //console.log(response.data.response_data.website_name)
+                    setBlogName(response.data.response_data.website_name);
+               })
+               .catch(function (error) {
+                    console.log(error);
+               });
+           }
+           // Call the function
+           loadBlogName();
+      }, []);
+
     function handleClick(){
         i18n.changeLanguage(document.getElementById('lang').value);
     }
@@ -79,7 +99,7 @@ function Home(props) {
                             <div class="row d_flex">
                                 <div class=" col-xl-8 col-lg-8 col-md-8 col-12-9">
                                     <div class="text-bg">
-                                    <h1>{t('blog.1')}<br/> <span class="white1">BlogName from user</span></h1>
+                                    <h1>{t('blog.1')}<br/> <span class="white1">{blogName}</span></h1>
                                     <p>{t('some_text.1')}</p>
                                     <a href="#">{t('red.1')}</a>
                                     </div>
