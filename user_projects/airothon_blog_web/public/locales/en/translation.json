@@ -1,0 +1,42 @@
+{
+    "blog":{
+        "1":"Blog"},
+    "some_text":{
+        "1":"It is a long established fact that a reader will be distracted by the readable content of a page when looking at its layout. The point of using Lorem Ipsum is that it has a more-or-less normal distribution of letters,"
+    },
+        "bl":{"1":"Our Blogs"
+        },
+        "bl1":{"1":"The biggest and most awesome Photo of year"
+        },
+        "bl2":{"1":"It is a long established fact that a reader will be distracted by the readable content of a page when looking at its layout. The point of using Lorem Ipsum is that it has a more-or-less normal distribution of letters, as opposed to using 'Content here, content here', making it look like readable English. Many desktop publishing packages and web page editors now use Lorem Ipsum as their default model"
+        },
+        "bl3":{"1":"Post By : Blogger"
+        },
+        "lk":{"1":"Like"
+        },
+        "cmn":{"1":"Comment"
+        },
+        "ms":{"1":"This week is incelebrity homes love food"
+        },
+        "red":{"1":"Read More"
+        },
+        "msg1":{
+            "1":"Drop Us a Message"
+        },
+        "msg2":{
+            "1":"Your Name *"
+        },
+        "msg3":{
+            "1":"Your Email *"
+        },
+        "msg4":{
+            "1":"Your Phone Number *"
+        },
+        "msg5":{
+            "1":"Your Message *"
+        },
+        "msg6":{
+            "1":"Send Message"
+        }
+    
+}

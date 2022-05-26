@@ -1,0 +1,45 @@
+{
+"blog":{
+    "1":"Blog"},
+"some_text":{
+    "1":"Es un hecho establecido desde hace mucho tiempo que un lector se distraerá con el contenido legible de una página cuando mire su diseño. El punto de usar Lorem Ipsum es que tiene una distribución de letras más o menos normal,"
+},
+    "bl":{"1":"Nuestros Blogs"
+    },
+    "bl1":{"1":"La foto más grande e impresionante del año."
+    },
+    "bl2":{"1":"Es un hecho establecido desde hace mucho tiempo que un lector se distraerá con el contenido legible de una página cuando mire su diseño. El punto de usar Lorem Ipsum es que tiene una distribución de letras más o menos normal, a diferencia de usar 'Contenido aquí, contenido aquí', lo que hace que parezca un inglés legible. Muchos paquetes de autoedición y editores de páginas web ahora usan Lorem Ipsum como su modelo predeterminado."
+    },
+    "bl3":{"1":"Publicar por: Blogger"
+    },
+    "lk":{"1":"Me gusta"
+    },
+    "cmn":{"1":"Comentario"
+    },
+    "ms":{"1":"Esta semana es incelebrity hogares amor comida"
+    },
+    "red":{"1":"Lee mas"
+    },
+    "fea":{"1":"Características sobresalientes"
+    },
+    "fea1":{"1":"simplemente texto ficticio de la industria de la imprenta y la composición tipográfica. Lorem Ipsum ha sido el estándar de la industria"
+    },
+    "msg1":{
+        "1":"Envíanos un mensaje"
+    },
+    "msg2":{
+        "1":"Su nombre *"
+    },
+    "msg3":{
+        "1":"Tu correo electrónico *"
+    },
+    "msg4":{
+        "1":"Su número de teléfono *"
+    },
+    "msg5":{
+        "1":"Tu mensaje *"
+    },
+    "msg6":{
+        "1":"Enviar mensaje"
+    }
+}
