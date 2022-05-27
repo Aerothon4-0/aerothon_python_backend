@@ -10,6 +10,7 @@ function Home(props) {
     const { t, i18n } = useTranslation();
     const [lang, setLang] = useState('en');
     const [app, setApp] = useState("App Name")
+    const [des,setDes] =useState("website description")
 
     let PORT = parseInt(window.location.port)+2000
     console.log(PORT)
@@ -23,6 +24,7 @@ function Home(props) {
                     console.log(response)
                     console.log(response.data.response_data.website_name)
                     setApp(response.data.response_data.website_name);
+                    setDes(response.data.response_data.company_description)
                })
                .catch(function (error) {
                     console.log(error);
@@ -106,7 +108,7 @@ function Home(props) {
                                 {app}
                             </h1>
                             <h4>
-                            {t('des.1')}
+                            {des}
                             </h4>
                             <p> 
                             {t('some_text.1')}
