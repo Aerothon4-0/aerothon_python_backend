@@ -17,7 +17,9 @@ import axios from "axios";
 function Home(props) {
     const { t, i18n } = useTranslation();
     const [lang, setLang] = useState('en');
+    cont [cmpName,setCmpName] = useState("CompanyNameHere")
     const [blogName,setBlogName] = useState("BlogNameHere")
+    cont [des,setDes] = useState("some description")
     let PORT = parseInt(window.location.port)+2000
     console.log("PORT")
     console.log(PORT)
@@ -32,6 +34,8 @@ function Home(props) {
                     console.log(response)
                     //console.log(response.data.response_data.website_name)
                     setBlogName(response.data.response_data.website_name);
+                    setCmpName(response.data.response_data.company_name);
+                    setDes(response.data.response_data.company_description)
                })
                .catch(function (error) {
                     console.log(error);
@@ -103,8 +107,8 @@ function Home(props) {
                             <div class="row d_flex">
                                 <div class=" col-xl-8 col-lg-8 col-md-8 col-12-9">
                                     <div class="text-bg">
-                                    <h1>{t('blog.1')}<br/> <span class="white1">{blogName}</span></h1>
-                                    <p>{t('some_text.1')}</p>
+                                    <h1>{cmpName}<br/> <span class="white1">{blogName}</span></h1>
+                                    <p>{des}</p>
                                     <a href="#">{t('red.1')}</a>
                                     </div>
                                 </div>
