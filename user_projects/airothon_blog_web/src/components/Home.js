@@ -17,9 +17,9 @@ import axios from "axios";
 function Home(props) {
     const { t, i18n } = useTranslation();
     const [lang, setLang] = useState('en');
-    cont [cmpName,setCmpName] = useState("CompanyNameHere")
+    const [cmpName,setCmpName] = useState("CompanyNameHere")
     const [blogName,setBlogName] = useState("BlogNameHere")
-    cont [des,setDes] = useState("some description")
+    const [des,setDes] = useState("some description")
     let PORT = parseInt(window.location.port)+2000
     console.log("PORT")
     console.log(PORT)
