@@ -11,6 +11,7 @@ USER_BACKEND_PROJECT_DIR = ROOT_DIR + "/user_projects/aerothon_python_user_backe
 FRONT_END_PROJECT_DIR = {
 	"blog" : ROOT_DIR + "/user_projects/airothon_blog_web",
 	"org" : ROOT_DIR + "/user_projects/airothon_organization_web",
+	"iot" : ROOT_DIR + "/user_projects/airothon_iot_blub",
 }
 
 # SERVER_IP_ADDRESS = "http://35.83.83.107"

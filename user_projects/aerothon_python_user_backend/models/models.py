@@ -22,3 +22,13 @@ class Website(database.Model):
 
 	created_at = database.Column(database.DateTime, nullable=False,default=datetime.utcnow)
 	updated_at = database.Column(database.DateTime, nullable=False,default=datetime.utcnow)
+
+
+
+
+class Bulb(database.Model):
+	__tablename__ = 'buld_iot'
+	
+	id = database.Column(database.Integer , primary_key=True, autoincrement=True)
+	bulb_status = database.Column(database.Boolean, default=False, nullable=False)
+	
