@@ -13,4 +13,5 @@ FRONT_END_PROJECT_DIR = {
 	"org" : ROOT_DIR + "/user_projects/airothon_organization_web",
 }
 
-SERVER_IP_ADDRESS = "http://35.83.83.107"
+# SERVER_IP_ADDRESS = "http://35.83.83.107"
+SERVER_IP_ADDRESS = "http://0.0.0.0"

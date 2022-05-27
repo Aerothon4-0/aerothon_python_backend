@@ -11,7 +11,7 @@ from urls.urls import urls
 from models.models import database
 
 from views.initializer_view import initializ_data
-
+from flask_cors import CORS
 # from settings import *
 
 
@@ -36,6 +36,7 @@ def page_not_found(e):
   return jsonify(message='message') , 200
 
 application.register_error_handler(404, page_not_found)
+CORS(application)
 
 database.init_app(application)
 migrate = Migrate(application, database)

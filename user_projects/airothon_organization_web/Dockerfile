@@ -15,7 +15,7 @@ RUN npm install
 # Bundle app source
 COPY . .
 
-EXPOSE 3000 3001 3002 3003 3004 
+EXPOSE 3000 3001 3002 3003 3004 3005 3006 3007 3008 3009 3010 3011
 
 #RUN chmod +x ./entrypoint.sh
 #ENTRYPOINT ["/bin/bash","-c","chmod +x ./entrypoint.sh && ./entrypoint.sh"]

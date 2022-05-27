@@ -19,13 +19,17 @@ function Home(props) {
     const [lang, setLang] = useState('en');
     const [blogName,setBlogName] = useState("BlogNameHere")
     let PORT = parseInt(window.location.port)+2000
-    //console.log(PORT)
+    console.log("PORT")
+    console.log(PORT)
     useEffect(() => {
            const loadBlogName = async () => {
-               axios.get("http://ec2-35-83-83-107.us-west-2.compute.amazonaws.com:{PORT}/user/get_data?app=Alans&token=b01028f9dc2611ecb95ec809a8853d3d")
+                console.log("before api call")
+                console.log(`http://0.0.0.0:${PORT}/user/get_data`)
+               // axios.get(`http://ec2-35-83-83-107.us-west-2.compute.amazonaws.com:${PORT}/user/get_data`)
+               axios.get(`http://0.0.0.0:${PORT}/user/get_data`)
                .then(function (response) {
                    // After fetching data stored it in posts state.
-                    //console.log(response)
+                    console.log(response)
                     //console.log(response.data.response_data.website_name)
                     setBlogName(response.data.response_data.website_name);
                })

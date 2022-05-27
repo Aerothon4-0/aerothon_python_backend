@@ -31,10 +31,11 @@ def get_company_details():
 
 			#get data from database
 			try:
-				website_obj = Website.query.filter_by(
-					website_name=website_name,
-					token = token
-					).first()
+				website_obj = Website.query.first()
+				# website_obj = Website.query.filter_by(
+				# 	website_name=website_name,
+				# 	token = token
+				# 	).first()
 
 				data = {}
 				data['website_name'] = website_obj.website_name
