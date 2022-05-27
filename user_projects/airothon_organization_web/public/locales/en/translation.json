@@ -1,0 +1,45 @@
+{
+    "des":{
+        "1":"For individuals, character is destiny. For organizations, culture is destiny"},
+    "some_text":{
+        "1":"Contrary to popular belief, Lorem Ipsum is not simply random text. It has roots in a piece of classNameical Latin literature"},
+        "ser":{"1":"Our Services"
+        },
+        "ser1":{"1":"Storage"
+        },
+        "ser2":{"1":"Analytics"
+        },
+        "ser3":{"1":"Security"
+        },
+        "ser11":{"1":"simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard"
+        },
+        "ser22":{"1":"simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard"
+        },
+        "ser33":{"1":"simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard"
+        },
+        "red":{"1":"Read More"
+        },
+        "fea":{"1":"Outstanding Features"
+        },
+        "fea1":{"1":"simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard"
+        },
+        "msg1":{
+            "1":"Drop Us a Message"
+        },
+        "msg2":{
+            "1":"Your Name *"
+        },
+        "msg3":{
+            "1":"Your Email *"
+        },
+        "msg4":{
+            "1":"Your Phone Number *"
+        },
+        "msg5":{
+            "1":"Your Message *"
+        },
+        "msg6":{
+            "1":"Send Message"
+        }
+    
+}

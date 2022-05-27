@@ -10,7 +10,7 @@ USER_BACKEND_PROJECT_DIR = ROOT_DIR + "/user_projects/aerothon_python_user_backe
 
 FRONT_END_PROJECT_DIR = {
 	"blog" : ROOT_DIR + "/user_projects/airothon_blog_web",
-	"org" : "",
+	"org" : ROOT_DIR + "/user_projects/airothon_organization_web",
 }
 
-SERVER_IP_ADDRESS = "http://frontendmain-env.eba-9qrg8xzc.us-west-2.elasticbeanstalk.com"
+SERVER_IP_ADDRESS = "http://35.83.83.107"
