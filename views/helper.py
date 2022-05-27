@@ -15,6 +15,7 @@ def create_python_backend_website(website_name,token,port):
 		bashCommand = 'python {}/start.py -a "{}" -p {} -e {} --token {} -t create'.format(USER_BACKEND_PROJECT_DIR,name,port,website_name,token)
 		output = subprocess.check_output(['bash','-c', bashCommand],cwd=USER_BACKEND_PROJECT_DIR)
 		print("--after start backend docker--")
+		app.logger.info('INFO : %s ',str(output) )
 	except Exception as e:
 		print(e)
 		app.logger.error('ERROR : %s ',str(e) )
@@ -36,6 +37,7 @@ def create_react_website(website_name,token,port,front_type):
 		bashCommand = 'python {}/start.py -a "{}" -p {} -e {} --token {} -t create'.format(project_dir,name,port,website_name,token)
 		output = subprocess.check_output(['bash','-c', bashCommand],cwd=project_dir)
 		print("--after start frontend docker--")
+		app.logger.info('INFO : %s ',str(output) )
 	except Exception as e:
 		print(e)
 		app.logger.error('ERROR : %s ',str(e) )

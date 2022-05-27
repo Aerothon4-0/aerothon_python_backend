@@ -45,7 +45,7 @@ def generate_website():
 
 				token = str( uuid.uuid1().hex  )
 				print(token , "token")
-				
+				app.logger.info('INFO : %s ',str(token) )
 			except Exception as e:
 				print(e)
 				app.logger.error('ERROR : %s ',str(e) )
